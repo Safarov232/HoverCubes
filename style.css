@@ -5,11 +5,45 @@
     outline: none;
 }
 
+:root {
+    --primary-color: #FFF;
+    --secondary-color: #000;
+}
+
+html {
+    transition: all 0.5s ease-in;
+}
+
+html.light {
+    --primary-color: #333;
+    --secondary-color: rgb(225, 224, 224);
+}
+
+html.light {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+html.light h1 {
+    color: rgb(0, 55, 12)!important;
+    text-shadow: 0 0 2px rgb(55, 55, 55)!important;
+}
+
 body {
-    background-color: #111;
+    background-color: var(--secondary-color);
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.btn {
+    padding: 3px 5px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: 700;
+    position: absolute;
+    top: 2%;
+    right: 3%;
 }
 
 .container {
@@ -34,6 +68,11 @@ body {
     height: 20px;
     margin: 2px;
     transition: 3s ease;
+}
+
+.square.light {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 2px rgb(157, 157, 157)
 }
 
 .square:hover {
